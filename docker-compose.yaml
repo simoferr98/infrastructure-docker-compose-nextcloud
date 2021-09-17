@@ -24,7 +24,7 @@ services:
       - TZ=Europe/Rome
       - TRUSTED_PROXIES=nextcloud_proxy
       - APACHE_DISABLE_REWRITE_IP=1
-      - NEXTCLOUD_TRUSTED_DOMAINS=nuvola-test.onsimo.it
+      - NEXTCLOUD_TRUSTED_DOMAINS=domain.it
     volumes:
       - nextcloud_app_data:/data
       - nextcloud_app_log:/config/log
@@ -44,22 +44,22 @@ services:
       - PUID=1050
       - PGID=1050
       - TZ=Europe/Rome
-      - EMAIL=cert@onsimo.it
-      - URL=nuvola-test.onsimo.it
+      - EMAIL=mail@domain.it
+      - URL=domain.it
       - ONLY_SUBDOMAINS=false
       - VALIDATION=http
       - DNSPLUGIN=cloudflare
     volumes:
       - nextcloud_proxy:/config
-      - /share/Data_Container_01/Progetti/altnextcloud01/config/nextcloud_proxy/nginx.cfg:/config/nginx/site-confs/default:ro
+      - nginx.cfg:/config/nginx/site-confs/default:ro
 
 secrets:
   nextcloud_db_name:
-    file: /share/Data_Container_01/Progetti/altnextcloud01/secret/postgres_db.txt
+    file: ./postgres_db.txt
   nextcloud_db_password:
-    file: /share/Data_Container_01/Progetti/altnextcloud01/secret/postgres_password.txt
+    file: ./postgres_password.txt
   nextcloud_db_user:
-    file: /share/Data_Container_01/Progetti/altnextcloud01/secret/postgres_user.txt
+    file: ./postgres_user.txt
 
 volumes:
   nextcloud_db:
