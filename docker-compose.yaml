@@ -17,7 +17,7 @@ services:
       - nextcloud_db_user
 
   nextcloud_app:
-    image: linuxserver/nextcloud:php8-version-22.1.1
+    image: linuxserver/nextcloud:php8-version-22.2.0
     container_name: nextcloud_app
     restart: always
     environment:
@@ -34,7 +34,7 @@ services:
       - nextcloud_db
 
   nextcloud_proxy:
-    image: linuxserver/swag:version-1.19.0
+    image: linuxserver/swag:version-1.20.0
     container_name: nextcloud_proxy
     restart: always
     ports:
