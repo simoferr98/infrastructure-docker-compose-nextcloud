@@ -10,8 +10,8 @@ Creating an infrastructure to host NextCloud.  All the components that compose i
 
 ### Docker images:
 - [***PostgreSQL***](https://hub.docker.com/_/postgres): postgres:9.6.23-stretch
-- [***NextCloud***](https://hub.docker.com/r/linuxserver/nextcloud): linuxserver/nextcloud:php8-version-22.1.1
-- [***Swag***](https://docs.docker.com/compose/): linuxserver/swag:version-1.19.0
+- [***NextCloud***](https://hub.docker.com/r/linuxserver/nextcloud): linuxserver/nextcloud:php8-version-22.2.0
+- [***Swag***](https://docs.docker.com/compose/): linuxserver/swag:version-1.20.0
 
 ## Deployment method:
 [***Docker***](https://docs.docker.com/compose/) is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.Because all of the containers share the services of a single operating system kernel, they use fewer resources than virtual machines.
